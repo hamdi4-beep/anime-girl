@@ -7,29 +7,30 @@ body {
     font-family: Quicksand;
     font-size: 20px;
     color: #333;
-    mix-blend-mode: screen;
 }
 
 p {
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-    mix-blend-mode: screen;
-    padding: 20px;
+    position: relative;
     font-size: 4em;
-    font-weight: bold;
     margin: auto;
-    color: #5c55aa;
-    text-shadow: 2px 1px 2px #000;
-    animation: rotate 2s infinite ease alternate;
+    padding: 10px;
+    font-weight: bold;
+    color: #000;
+    background: #FFF;
+    mix-blend-mode: screen;
+    text-shadow: 0 1px 3px #555;
+    animation: glow 0.6s infinite alternate ease-out;
 }
 
-@keyframes rotate {
+p::first-letter {
+    color: #F00;
+}
+
+@keyframes glow {
     from {
-        transform: rotate(0);
-        color: #5c55aa;
+        color: #000;
     }
     to {
-        transform: rotate(360deg);
-        color: #FFF;
+        color: #0F0;
     }
 }
