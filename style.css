@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 body {
-    background: url(https://1.bp.blogspot.com/-pzAAXQ0z-1o/XIkaFdS_XII/AAAAAAAAAgo/P3g_GQy3gNUghMM6CO8D3S1VneNELfLTwCKgBGAs/w2560-h1440-c/cat-city-night-scenery-anime-uhdpaper.com-4K-134.jpg) center;
+    background: url(https://wallpapercave.com/wp/wp5392103.jpg) center;
     background-size: cover;
     display: flex;
     margin: 0;
@@ -24,6 +24,23 @@ p {
 
 .glowB {
     animation: glow 0.4s infinite ease-out alternate;
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes glow {

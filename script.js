@@ -21,3 +21,7 @@ spans.forEach(function(span, i) {
     span.classList.add(animationNames[i]);
     console.log(i);
 });
+
+p.addEventListener("click", function(e) {
+    this.classList.add("rotate");
+});
