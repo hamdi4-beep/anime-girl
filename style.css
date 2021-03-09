@@ -38,23 +38,6 @@ p {
     animation: glow 0.4s infinite ease-out alternate;
 }
 
-.rotate {
-    animation-name: rotate;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    animation-direction: alternate;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 @keyframes glow {
     from {
         opacity: 0;
