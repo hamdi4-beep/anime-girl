@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 body {
+    background: url(https://1.bp.blogspot.com/-pzAAXQ0z-1o/XIkaFdS_XII/AAAAAAAAAgo/P3g_GQy3gNUghMM6CO8D3S1VneNELfLTwCKgBGAs/w2560-h1440-c/cat-city-night-scenery-anime-uhdpaper.com-4K-134.jpg) center;
+    background-size: cover;
     display: flex;
     margin: 0;
     font-family: Quicksand;
@@ -9,50 +11,26 @@ body {
 }
 
 p {
-    position: relative;
     font-size: 4em;
-    margin: 0;
     font-weight: bold;
-    animation: glow 1s infinite alternate ease-out;
-}
-
-.container {
-    border-bottom: 10px solid #FFF;
-    position: relative;
-    z-index: 1;
+    color: #333;
     margin: auto;
-    text-align: center;
-    transform: rotateZ(45deg);
-}
-
-span {
-    background: rgba(0, 0, 255, 0.45);
-    color: #FFF;
-    margin-right: 6px;
     text-shadow: 1px 2px 3px #000;
 }
 
-.blur {
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background: url(https://wallpaperaccess.com/full/2917305.jpg) center;
-    background-size: cover;
-    filter: blur(2px);
+.glowA {
+    animation: glow 0.8s infinite ease-in alternate;
+}
+
+.glowB {
+    animation: glow 0.4s infinite ease-out alternate;
 }
 
 @keyframes glow {
     from {
-        top: 0;
-        font-weight: light;
-        color: #333;
+        opacity: 0;
     }
     to {
-        top: 90px;
-        font-weight: bold;
-        color: #0F0;
+        opacity: 1;
     }
 }
