@@ -1,8 +1,16 @@
 // glow animation mechanism
 
 const p = document.querySelector("p");
-const classNames = ["#F06", "#3bbced", "#777","#555","#3dc200",
-                    "#9000ff", "#0ef", "#60f", "#f03", "#f60"];
+const classNames = ["#F06",
+                    "#3bbced",
+                    "#777",
+                    "#555",
+                    "#3dc200",
+                    "#9000ff",
+                    "#0ef",
+                    "#60f",
+                    "#f03",
+                    "#f60"];
 let str = p.textContent;
 
 const animationNames = ["glowA", "glowB"];
@@ -32,16 +40,18 @@ p.addEventListener("click", function(e) {
 
 // slideshow timer
 
+const bg = document.querySelector(".blur");
 const images = ["https://i.pinimg.com/originals/35/8b/53/358b539b1fe285e32573de0a9cd15182.jpg",
                 "https://wallpaperaccess.com/full/158905.jpg",
                 "https://wallpaperaccess.com/full/2415294.jpg",
                 "https://images.hdqwalls.com/wallpapers/cyberpunk-2077-4k-2020-game-jd.jpg",
-                "https://images.wallpapersden.com/image/download/stray-game-cyberpunk_bGZoZ2WUmZqaraWkpJRmbmdlrWZlbWU.jpg"]
+                "https://images.wallpapersden.com/image/download/stray-game-cyberpunk_bGZoZ2WUmZqaraWkpJRmbmdlrWZlbWU.jpg",
+                "https://wallpapercave.com/wp/wp5392103.jpg"]
 let x = 0;
 
 setInterval(function() {
     if (x != 5) {
-        document.body.style.backgroundImage = "url(" + images[x] + ")";
+        bg.style.backgroundImage = "url(" + images[x] + ")";
         x++;
     } else {
         x = 0;
