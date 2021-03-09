@@ -63,3 +63,8 @@ setInterval(function() {
 const audio = document.createElement("audio");
 audio.src = "https://vgmsite.com/soundtracks/persona-3-original-soundtrack/fmmwwmjr/1-12%20When%20The%20Moon%27s%20Reaching%20Out%20Stars.mp3";
 audio.autoplay = "autoplay";
+
+bg.onclick = function() {
+    if (audio.paused) audio.play();
+    else audio.pause();
+}
