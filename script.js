@@ -68,3 +68,5 @@ bg.onclick = function() {
     if (audio.paused) audio.play();
     else audio.pause();
 }
+
+alert("Click anywhere on the background to play music.");
