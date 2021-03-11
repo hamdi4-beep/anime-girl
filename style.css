@@ -3,7 +3,7 @@
 body {
     display: flex;
     align-items: center;
-    background: #48198f;
+    background: url(https://miro.medium.com/max/1600/1*VFTb35W7o9_qCo_ajOUrhQ.png) repeat;
     font-family: Quicksand;
     font-size: 20px;
     color: #333;
@@ -51,10 +51,19 @@ h1 {
     color: #FFF;
     margin: auto;
     border-bottom: 1px solid #FFF;
+    animation: fade 1s infinite alternate-reverse ease;
 }
 
 img {
     width: 200px;
     height: 200px;
     border-radius: 100%;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
 }
