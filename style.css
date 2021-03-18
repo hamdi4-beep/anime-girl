@@ -90,3 +90,16 @@ li:hover {
 .current {
     border-bottom: 5px solid #F00;
 }
+
+@media only screen and (max-width: 768px) {
+    ul {
+        display: block;
+        width: 200px;
+    }
+    li {
+        border-bottom: 5px solid transparent;
+    }
+    header h1 {
+        top: -10px;
+    }
+}
