@@ -1,0 +1,15 @@
+.wrapper {
+    background: #EEE;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.pass {
+    color: rgb(132, 151, 22);
+}
+
+.fail {
+    color: #F00;
+}

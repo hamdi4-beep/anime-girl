@@ -1,69 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 body {
-    display: flex;
-    align-items: center;
-    background: url(https://miro.medium.com/max/1600/1*VFTb35W7o9_qCo_ajOUrhQ.png) repeat;
     font-family: Quicksand;
     font-size: 20px;
-    color: #333;
-}
-
-.wrapper {
-    display: flex;
-    position: relative;
-    width: 400px;
-    height: 600px;
-    margin: 0 auto;
-    padding: 15px;
-    box-sizing: border-box;
     text-align: center;
 }
 
-.blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    gap: 10px;
+    background: #EEE;
     width: 100%;
-    height: 100%;
-    background: url(https://iphone7wallpapers.co/media/uploads/2017/02/Studio-Ghibli-Castle-Anime-Green-Peace-Art-Illustration-640x960.jpg) center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.wrapper ~ * {
+    background: #3bbced;
+    padding: 30px;
+    color: #FFF;
+}
+
+header {
+    background: url(https://www.wallpaperup.com/uploads/wallpapers/2013/02/04/34346/f359b8d17e547d73a12afcee3d7b08d8.jpg) center;
     background-size: cover;
-    filter:blur(5px);
+    grid-column: 1 / 13;
+    grid-row: 1 / 3;
 }
 
-.blur::after {
-    content: "";
-    display:block;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.5;
-    transition: opacity 0.5s;
+main {
+    display: flex;
+    background: #3bbced;
+    grid-column: 1 / 13;
+    grid-row: 3 / 5;
 }
 
-.wrapper:hover .blur::after {
-    opacity: 0;
+section {
+    display: flex;
+    background: #3bbced;
+    grid-column: 1 / 13;
+    grid-row: 5 / 7;
+}
+
+footer {
+    display: flex;
+    background: #3bbced;
+    grid-column: 1 / 13;
 }
 
 h1 {
-    font-size: 2.4em;
-    color: #FFF;
     margin: auto;
-    border-bottom: 1px solid #FFF;
-    animation: fade 1s infinite alternate-reverse ease;
 }
 
-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
+header h1 {
+    position: relative;
+    top: 50px;
+    font-weight: bold;
+    mix-blend-mode: screen;
+    padding: 10px;
+    margin: 0 auto;
+    background: #FFF;
+    width: 150px;
+    text-shadow: 0 1px 2px #111;
+    color: #333;
 }
 
-@keyframes fade {
-    from {
-        opacity: 0;
-    } to {
-        opacity: 1;
-    }
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 400px;
+}
+
+li {
+    padding: 10px;
+}
+
+li:hover {
+    cursor: pointer;
+    color: #FFF;
+}
+
+.current {
+    border-bottom: 5px solid #F00;
 }
