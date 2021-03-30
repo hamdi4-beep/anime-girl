@@ -1,32 +1,28 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a8f402463f.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <title>Todo List</title>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <ul>
-                <li class="current">Home</li>
-                <li>Shop</li>
-                <li>Prices</li>
-                <li>About</li>
-            </ul>
-            <h1>Nature</h1>
-        </header>
-        <section>
-            <h1>SECTION SECTOR</h1>
-        </section>
-        <main>
-            <h1>MAIN SECTION</h1>
-        </main>
-        <footer>
-            <h1>FOOTER</h1>
-        </footer>
+    <header>
+        <h1>Hamdi's Todo List</h1>
+    </header>
+    <form>
+        <input type="text" class="todo-input">
+        <button class="todo-button" type="submit">
+            <i class="fas fa-plus-square"></i>
+        </button>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
     </div>
 </body>
 </html>

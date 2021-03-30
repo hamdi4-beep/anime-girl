@@ -1,105 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 body {
-    font-family: Quicksand;
-    font-size: 20px;
-    text-align: center;
+  background-image: linear-gradient(120deg, #e9cd72, #e0b976);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
 }
 
-.wrapper {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(150px, auto);
-    gap: 10px;
-    background: #EEE;
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
+body header {
+  font-size: 1.5rem;
 }
 
-.wrapper ~ * {
-    background: #3bbced;
-    padding: 30px;
-    color: #FFF;
+body header, body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 20vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header {
-    background: url(https://www.wallpaperup.com/uploads/wallpapers/2013/02/04/34346/f359b8d17e547d73a12afcee3d7b08d8.jpg) center;
-    background-size: cover;
-    grid-column: 1 / 13;
-    grid-row: 1 / 3;
+body form input, body form button {
+  padding: .5rem;
+  font-size: 2rem;
+  background: white;
+  border: none;
 }
 
-main {
-    display: flex;
-    background: #3bbced;
-    grid-column: 1 / 13;
-    grid-row: 3 / 5;
+body form button {
+  color: #e9cd72;
+  background: white;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
-section {
-    display: flex;
-    background: #3bbced;
-    grid-column: 1 / 13;
-    grid-row: 5 / 7;
+body form button:hover {
+  background: #e9cd72;
+  color: white;
 }
 
-footer {
-    display: flex;
-    background: #3bbced;
-    grid-column: 1 / 13;
+body .todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-h1 {
-    margin: auto;
+body .todo-container .todo-list {
+  list-style-type: none;
+  min-width: 30%;
 }
 
-header h1 {
-    position: relative;
-    top: 50px;
-    font-weight: bold;
-    mix-blend-mode: screen;
-    padding: 10px;
-    margin: 0 auto;
-    background: #FFF;
-    width: 150px;
-    text-shadow: 0 1px 2px #111;
-    color: #333;
+body .todo-container .todo-list .todo {
+  background: white;
+  margin: .5rem;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
 }
 
-ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    list-style-type: none;
-    padding: 0;
-    margin: 20px auto;
-    width: 400px;
+body .todo-container .todo-list .todo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 .5rem;
 }
 
-li {
-    padding: 10px;
+body .todo-container .todo-list .todo .completed-btn, body .todo-container .todo-list .todo .trash-btn {
+  background: #FF6F47;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-li:hover {
-    cursor: pointer;
-    color: #FFF;
+body .todo-container .todo-list .todo .completed-btn {
+  background: green;
 }
 
-.current {
-    border-bottom: 5px solid #F00;
+body .todo-container .todo-list .todo .fa-check, body .todo-container .todo-list .todo .fa-trash {
+  pointer-events: none;
 }
-
-@media only screen and (max-width: 620px) {
-    ul {
-        display: block;
-        width: 200px;
-    }
-    li {
-        border-bottom: 5px solid transparent;
-    }
-    header h1 {
-        top: -10px;
-    }
-}
+/*# sourceMappingURL=style.css.map */

@@ -6,10 +6,11 @@
     padding: 10px;
 }
 
-.pass {
-    color: rgb(132, 151, 22);
+.fail {
+    text-decoration: line-through;
+    color: #F00;
 }
 
-.fail {
-    color: #F00;
+.pass {
+    color: rgb(132, 151, 22);
 }

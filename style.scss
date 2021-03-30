@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #e9cd72, #e0b976);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    header,form {
+        display: flex;
+        min-height: 20vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form input, form button {
+        padding: .5rem;
+        font-size: 2rem;
+        background: white;
+        border: none;
+    }
+
+    form button {
+        color: #e9cd72;
+        background: white;
+        cursor: pointer;
+        transition: all .5s ease;
+
+        &:hover {
+            background: #e9cd72;
+            color: white;
+        }
+    }
+
+    .todo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .todo-list {
+            list-style-type: none;
+            min-width: 30%;
+
+            .todo {
+                background: white;
+                margin: .5rem;
+                color: #000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.5rem;
+
+                li {
+                    flex: 1;
+                    padding: 0 .5rem;
+                }
+
+                .completed-btn, .trash-btn {
+                    background: #FF6F47;
+                    color: white;
+                    border: none;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+
+                .completed-btn {
+                    background: green;
+                }
+
+                .fa-check, .fa-trash {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
