@@ -8,6 +8,7 @@ body {
     background-image: linear-gradient(120deg, #e9cd72, #e0b976);
     color: white;
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     min-height: 100vh;
 
     header {
@@ -24,8 +25,13 @@ body {
     form input, form button {
         padding: .5rem;
         font-size: 2rem;
+        font-family: 'Poppins', sans-serif;
         background: white;
         border: none;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     form button {
@@ -70,6 +76,10 @@ body {
                     padding: 1rem;
                     font-size: 1rem;
                     cursor: pointer;
+
+                    &:focus {
+                        outline: none;
+                    }
                 }
 
                 .completed-btn {
