@@ -5,45 +5,42 @@
 }
 
 body {
-    background-image: linear-gradient(120deg, #e9cd72, #e0b976);
-    color: white;
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
     min-height: 100vh;
+    background: linear-gradient(120deg, rgb(155, 111, 45), rgb(184, 147, 92));
 
-    header {
-        font-size: 1.5rem;
+    .fa-plus-square {
+        pointer-events: none;
     }
 
-    header,form {
+    header, form {
         display: flex;
-        min-height: 20vh;
         justify-content: center;
         align-items: center;
-    }
+        min-height: 20vh;
 
-    form input, form button {
-        padding: .5rem;
-        font-size: 2rem;
-        font-family: 'Poppins', sans-serif;
-        background: white;
-        border: none;
+        & input, & button {
+            padding: .5rem;
+            font-size: 1.5rem;
+            background: white;
+            border: none;
+            transition: all .5s ease;
 
-        &:focus {
-            outline: none;
+            &:focus {
+                outline: none;
+            }
         }
-    }
 
-    form button {
-        color: #e9cd72;
-        background: white;
-        cursor: pointer;
-        transition: all .5s ease;
-
-        &:hover {
-            background: #e9cd72;
+        h1 {
+            font-size: 2rem;
             color: white;
         }
+    }
+
+    form button:hover {
+        background: rgb(155, 111, 45);
+        color: white;
+        cursor: pointer;
     }
 
     .todo-container {
@@ -54,41 +51,45 @@ body {
         .todo-list {
             list-style-type: none;
             min-width: 30%;
+        }
 
-            .todo {
-                background: white;
-                margin: .5rem;
-                color: #000;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+        .todo {
+            background: white;
+            display: flex;
+            place-items: center;
+            margin: .5rem;
+            font-size: 1.5rem;
+            color: #000;
+
+            li {
+                flex: 1;
+                padding: 0 1rem;
+            }
+
+            .completed-button, .trash-button {
+                background:rgb(189, 54, 54);
+                padding: 1rem;
+                color: white;
                 font-size: 1.5rem;
-
-                li {
-                    flex: 1;
-                    padding: 0 .5rem;
-                }
-
-                .completed-btn, .trash-btn {
-                    background: #FF6F47;
-                    color: white;
-                    border: none;
-                    padding: 1rem;
-                    font-size: 1rem;
-                    cursor: pointer;
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-
-                .completed-btn {
-                    background: green;
-                }
+                border: none;
+                cursor: pointer;
+                transition: all .5s ease;
 
                 .fa-check, .fa-trash {
                     pointer-events: none;
                 }
+            }
+
+            .completed-button {
+                background: rgb(45, 185, 45);
+
+                &:hover {
+                    background: rgb(11, 126, 11);
+                }
+            }
+
+            .trash-button:hover {
+                background: rgb(117, 26, 26);
             }
         }
     }

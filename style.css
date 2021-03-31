@@ -6,53 +6,50 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #e9cd72, #e0b976);
-  color: white;
   font-family: 'Poppins', sans-serif;
-  font-weight: bold;
   min-height: 100vh;
+  background: linear-gradient(120deg, #9b6f2d, #b8935c);
 }
 
-body header {
-  font-size: 1.5rem;
+body .fa-plus-square {
+  pointer-events: none;
 }
 
 body header, body form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 20vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 20vh;
 }
 
-body form input, body form button {
+body header input, body header button, body form input, body form button {
   padding: .5rem;
-  font-size: 2rem;
-  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
   background: white;
   border: none;
-}
-
-body form input:focus, body form button:focus {
-  outline: none;
-}
-
-body form button {
-  color: #e9cd72;
-  background: white;
-  cursor: pointer;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 
-body form button:hover {
-  background: #e9cd72;
+body header input:focus, body header button:focus, body form input:focus, body form button:focus {
+  outline: none;
+}
+
+body header h1, body form h1 {
+  font-size: 2rem;
   color: white;
+}
+
+body form button:hover {
+  background: #9b6f2d;
+  color: white;
+  cursor: pointer;
 }
 
 body .todo-container {
@@ -72,47 +69,48 @@ body .todo-container .todo-list {
   min-width: 30%;
 }
 
-body .todo-container .todo-list .todo {
+body .todo-container .todo {
   background: white;
-  margin: .5rem;
-  color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  place-items: center;
+  margin: .5rem;
   font-size: 1.5rem;
+  color: #000;
 }
 
-body .todo-container .todo-list .todo li {
+body .todo-container .todo li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 .5rem;
+  padding: 0 1rem;
 }
 
-body .todo-container .todo-list .todo .completed-btn, body .todo-container .todo-list .todo .trash-btn {
-  background: #FF6F47;
-  color: white;
-  border: none;
+body .todo-container .todo .completed-button, body .todo-container .todo .trash-button {
+  background: #bd3636;
   padding: 1rem;
-  font-size: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
   cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
-body .todo-container .todo-list .todo .completed-btn:focus, body .todo-container .todo-list .todo .trash-btn:focus {
-  outline: none;
-}
-
-body .todo-container .todo-list .todo .completed-btn {
-  background: green;
-}
-
-body .todo-container .todo-list .todo .fa-check, body .todo-container .todo-list .todo .fa-trash {
+body .todo-container .todo .completed-button .fa-check, body .todo-container .todo .completed-button .fa-trash, body .todo-container .todo .trash-button .fa-check, body .todo-container .todo .trash-button .fa-trash {
   pointer-events: none;
+}
+
+body .todo-container .todo .completed-button {
+  background: #2db92d;
+}
+
+body .todo-container .todo .completed-button:hover {
+  background: #0b7e0b;
+}
+
+body .todo-container .todo .trash-button:hover {
+  background: #751a1a;
 }
 /*# sourceMappingURL=style.css.map */
