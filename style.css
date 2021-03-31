@@ -11,6 +11,17 @@ body {
   background: linear-gradient(120deg, #9b6f2d, #b8935c);
 }
 
+body .completed {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+body .fall {
+  -webkit-transform: translateY(8rem) rotateZ(20deg);
+          transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
 body .fa-plus-square {
   pointer-events: none;
 }
@@ -76,8 +87,11 @@ body .todo-container .todo {
   display: flex;
   place-items: center;
   margin: .5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: bolder;
   color: #000;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 body .todo-container .todo li {
@@ -91,15 +105,19 @@ body .todo-container .todo .completed-button, body .todo-container .todo .trash-
   background: #bd3636;
   padding: 1rem;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 
-body .todo-container .todo .completed-button .fa-check, body .todo-container .todo .completed-button .fa-trash, body .todo-container .todo .trash-button .fa-check, body .todo-container .todo .trash-button .fa-trash {
+body .todo-container .todo .completed-button .fa-trash, body .todo-container .todo .completed-button .fa-check, body .todo-container .todo .trash-button .fa-trash, body .todo-container .todo .trash-button .fa-check {
   pointer-events: none;
+}
+
+body .todo-container .todo .completed-button:focus, body .todo-container .todo .trash-button:focus {
+  outline: none;
 }
 
 body .todo-container .todo .completed-button {

@@ -9,6 +9,16 @@ body {
     min-height: 100vh;
     background: linear-gradient(120deg, rgb(155, 111, 45), rgb(184, 147, 92));
 
+    .completed {
+        text-decoration: line-through;
+        opacity: .5;
+    }
+
+    .fall {
+        transform: translateY(8rem) rotateZ(20deg);
+        opacity: 0;
+    }
+
     .fa-plus-square {
         pointer-events: none;
     }
@@ -58,8 +68,10 @@ body {
             display: flex;
             place-items: center;
             margin: .5rem;
-            font-size: 1.5rem;
+            font-size: 1rem;
+            font-weight: bolder;
             color: #000;
+            transition: all .5s ease;
 
             li {
                 flex: 1;
@@ -70,13 +82,17 @@ body {
                 background:rgb(189, 54, 54);
                 padding: 1rem;
                 color: white;
-                font-size: 1.5rem;
+                font-size: 1rem;
                 border: none;
                 cursor: pointer;
                 transition: all .5s ease;
 
-                .fa-check, .fa-trash {
+                .fa-trash, .fa-check {
                     pointer-events: none;
+                }
+
+                &:focus {
+                    outline: none;
                 }
             }
 

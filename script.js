@@ -43,8 +43,20 @@ function addItem(e) {
 }
 
 function removeItem(e) {
-    if (e.target.className == "trash-button") {
-        const item = e.target.parentElement;
-        item.remove();
+    // delete functionality
+    const item = e.target;
+    if (item.className == "trash-button") {
+        const todo = item.parentElement;
+        // Animation mechanism
+        todo.classList.add("fall");
+        todo.addEventListener("transitionend", function() {
+            todoList.removeChild(todo);
+        });
+    }
+
+    // check mark functionality
+    if (item.className == "completed-button") {
+        const todo = item.parentNode;
+        todo.classList.toggle("completed");
     }
 }
